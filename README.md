@@ -18,9 +18,6 @@ Go to the catalog folder in your computer.
 Launch application.py from python console or doubleclick it. It depends on how Python is configured on your server.
 A webbrowser is launched where Item Catalog Application is showed, this is the URL: http://localhost:8000/
 
-### Adding Items
-Y
-
 ## Files in folder
 Originally the content of the Catalog folder is:
 
