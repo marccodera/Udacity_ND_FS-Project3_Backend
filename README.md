@@ -1,5 +1,5 @@
 # Udacity_ND_FS-Project3_Build an Item Catalog Application
-=============
+
 ## Build an Item Catalog Application Project for Full Stack Nano Degree at Udacity
 Last Update: March 16th 2018
 
