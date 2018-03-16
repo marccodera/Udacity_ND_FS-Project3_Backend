@@ -20,18 +20,19 @@ A webbrowser is launched where Item Catalog Application is showed, this is the U
 
 ## Files in folder
 Originally the content of the Catalog folder is:
-
-\catalog\...
+```
+\catalog\ ...
   \application.py
   \client_secrets.json
   \database_setup.pyc
   \README.md   
-  \static\... (for the css style files)
+  \static\ ... (for the css style files)
   \catalog.db
   \database_setup.py
   \lotsOfCategories.py
   \README.txt
-  \templates\... (for the HTML template files)
+  \templates\ ... (for the HTML template files)
+```
 
 ## Author
 Marc Codera Campos
