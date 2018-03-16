@@ -1,0 +1,40 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+	<div class="container">
+		<form action="{{url_for('editItem', category = item.category.name, item = item.name)}}" class="row" method = 'POST'>
+			<div class="col-md-8">
+				<div class="text-darkblue">
+					<h2>Edit Item</h2>
+				</div>
+				<div class="text-primary">
+					<div class="mb-2">Name
+						<div><input type='text' placeholder = "{{item.name}}" class="col-sm-auto" maxlength="80" name='name'></div>
+					</div>
+					<div class="mb-2">Description
+						<div><textarea rows="4" class="col-sm-auto" maxlength="250" name="description">{{item.description}}</textarea></div>
+					</div>
+					<div class="mb-2">Category
+						<div class="text-secondary">{{item.category.name}}</div>
+					</div>
+					<div class="mb-2">Created By
+						<div class="text-secondary">{{item.user.name}}</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 background-lightgreen">
+				<div class="text-darkblue">
+					<h2>Actions</h2>
+				</div>
+				
+				<div class="mt-4">
+					<input class="btn btn-success" type='submit' value='Update'>
+				</div>
+				<div class="mt-4">
+					<a class="btn btn-danger" href="{{url_for('showItemInfor', category = category, item = item.name)}}">Cancel</a>
+				</div>
+			</div>
+		</form>
+	</div>
+{% endblock %}

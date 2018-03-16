@@ -1,0 +1,37 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "headerpublic.html" %}
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 background-lightgrey">
+				<div class="text-darkblue">
+					<h2>Categories</h2>
+				</div>
+
+				{% for i in categories %} <!-- categories variable must be provided by calling string -->
+				
+				<div class="mb-2">
+					<a href="{{url_for('showCategoryItems', category_name = i.name)}}">{{i.name}}</a>
+				</div>
+				
+				{% endfor %}
+				
+			</div>
+			<div class="col-md-8">
+				<div class="text-darkblue">
+					<h2>All items for {{category_name}} category</h2>
+				</div>
+
+				{% for i in items %}
+
+				<div class="mb-2">
+					<a href="{{url_for('showItemInfor', category = i.category.name, item = i.name)}}">{{i.name}}</a>
+				</div>
+
+				{% endfor %}
+
+			</div>
+		</div>
+	</div>
+{% endblock %}

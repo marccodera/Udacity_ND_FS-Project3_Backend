@@ -1,0 +1,37 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+	<div class="container">
+		<form action="{{url_for('newItem')}}" method = 'POST' class="row">
+			<div class="col-md-8 mb-3">
+				<div class="text-darkblue">
+					<h2>Add New Item</h2>
+				</div>
+				<div class="text-primary">
+					<div class="mb-2">Name
+						<div><input type='text' class="col-sm-auto" maxlength="80" name='name'></div>
+					</div>
+					<div class="mb-2">Description
+						<div><textarea rows="4" class="col-sm-auto" maxlength="250" name="description"></textarea></div>
+					</div>
+					<div class="mb-2">Category
+						<div><input type='text' class="col-sm-auto" maxlength="70" name='category'></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 background-lightgreen">
+				<div class="text-darkblue">
+					<h2>Actions</h2>
+				</div>
+				
+				<div class="mt-4">
+					<input class="btn btn-success" type='submit' value='Save'>
+				</div>
+				<div class="mt-4">
+					<a class="btn btn-danger" href="{{url_for('showCatalog')}}">Cancel</a>
+				</div>
+			</div>
+		</form>
+	</div>
+{% endblock %}
